@@ -15,157 +15,11 @@
     const db = "SearchTest";
     // テスト用データを用意
     const init_data = [
-      {name: "フシギダネ", number: 1, h: 45, a: 49, b: 49 c: 65, s: 45, total: 253},
-      {name: "フシギソウ", number: 2, a: 45, b: 49, c: 65, s: 45},
-      {name: "フシギバナ", number: 3, a: 45, b: 49, c: 65, s: 45},
-      {name: "ヒトカゲ", number: 4, a: 45, b: 49, c: 65, s: 45},
-      {name: "リザード", number: 5, a: 45, b: 49, c: 65, s: 45},
-      {name: "リザードン", number: 6, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゼニガメ", number: 7, a: 45, b: 49, c: 65, s: 45},
-      {name: "カメール", number: 8, a: 45, b: 49, c: 65, s: 45},
-      {name: "カメックス", number: 9, a: 45, b: 49, c: 65, s: 45},
-      {name: "キャタピー", number: 10, a: 45, b: 49, c: 65, s: 45},
-      {name: "トランセル", number: 11, a: 45, b: 49, c: 65, s: 45},
-      {name: "バタフリー", number: 12, a: 45, b: 49, c: 65, s: 45},
-      {name: "ビードル", number: 13, a: 45, b: 49, c: 65, s: 45},
-      {name: "コクーン", number: 14, a: 45, b: 49, c: 65, s: 45},
-      {name: "スピアー", number: 15, a: 45, b: 49, c: 65, s: 45},
-      {name: "ポッポ", number: 16, a: 45, b: 49, c: 65, s: 45},
-      {name: "ピジョン", number: 17, a: 45, b: 49, c: 65, s: 45},
-      {name: "ピジョット", number: 18, a: 45, b: 49, c: 65, s: 45},
-      {name: "コラッタ", number: 19, a: 45, b: 49, c: 65, s: 45},
-      {name: "ラッタ", number: 20, a: 45, b: 49, c: 65, s: 45},
-      {name: "オニスズメ", number: 21, a: 45, b: 49, c: 65, s: 45},
-      {name: "オニドリル", number: 22, a: 45, b: 49, c: 65, s: 45},
-      {name: "アーボ", number: 23, a: 45, b: 49, c: 65, s: 45},
-      {name: "アーボック", number: 24, a: 45, b: 49, c: 65, s: 45},
-      {name: "ピカチュウ", number: 25, a: 45, b: 49, c: 65, s: 45},
-      {name: "ライチュウ", number: 26, a: 45, b: 49, c: 65, s: 45},
-      {name: "サンド", number: 27, a: 45, b: 49, c: 65, s: 45},
-      {name: "サンドパン", number: 28, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドラン♀", number: 29, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドリーナ", number: 30, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドクイン", number: 31, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドラン♂", number: 32, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドリーノ", number: 33, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニドキング", number: 34, a: 45, b: 49, c: 65, s: 45},
-      {name: "ピッピ", number: 35, a: 45, b: 49, c: 65, s: 45},
-      {name: "ピクシー", number: 36, a: 45, b: 49, c: 65, s: 45},
-      {name: "ロコン", number: 37, a: 45, b: 49, c: 65, s: 45},
-      {name: "キュウコン", number: 38, a: 45, b: 49, c: 65, s: 45},
-      {name: "プリン", number: 39, a: 45, b: 49, c: 65, s: 45},
-      {name: "プクリン", number: 40, a: 45, b: 49, c: 65, s: 45},
-      {name: "ズバット", number: 41, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴルバット", number: 42, a: 45, b: 49, c: 65, s: 45},
-      {name: "ナゾノクサ", number: 43, a: 45, b: 49, c: 65, s: 45},
-      {name: "クサイハナ", number: 44, a: 45, b: 49, c: 65, s: 45},
-      {name: "ラフレシア", number: 45, a: 45, b: 49, c: 65, s: 45},
-      {name: "パラス", number: 46, a: 45, b: 49, c: 65, s: 45},
-      {name: "パラセクト", number: 47, a: 45, b: 49, c: 65, s: 45},
-      {name: "コンパン", number: 48, a: 45, b: 49, c: 65, s: 45},
-      {name: "モルフォン", number: 49, a: 45, b: 49, c: 65, s: 45},
-      {name: "ディグダ", number: 50, a: 45, b: 49, c: 65, s: 45},
-      {name: "ダグトリオ", number: 51, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニャース", number: 52, a: 45, b: 49, c: 65, s: 45},
-      {name: "ペルシアン", number: 53, a: 45, b: 49, c: 65, s: 45},
-      {name: "コダック", number: 54, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴルダック", number: 55, a: 45, b: 49, c: 65, s: 45},
-      {name: "マンキー", number: 56, a: 45, b: 49, c: 65, s: 45},
-      {name: "オコリザル", number: 57, a: 45, b: 49, c: 65, s: 45},
-      {name: "ガーディ", number: 58, a: 45, b: 49, c: 65, s: 45},
-      {name: "ウインディ", number: 59, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニョロモ", number: 60, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニョロゾ", number: 61, a: 45, b: 49, c: 65, s: 45},
-      {name: "ニョロボン", number: 62, a: 45, b: 49, c: 65, s: 45},
-      {name: "ケーシィ", number: 63, a: 45, b: 49, c: 65, s: 45},
-      {name: "ユンゲラー", number: 64, a: 45, b: 49, c: 65, s: 45},
-      {name: "フーディン", number: 65, a: 45, b: 49, c: 65, s: 45},
-      {name: "ワンリキー", number: 66, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴーリキー", number: 67, a: 45, b: 49, c: 65, s: 45},
-      {name: "カイリキー", number: 68, a: 45, b: 49, c: 65, s: 45},
-      {name: "マダツボミ", number: 69, a: 45, b: 49, c: 65, s: 45},
-      {name: "ウツドン", number: 70, a: 45, b: 49, c: 65, s: 45},
-      {name: "ウツボット", number: 71, a: 45, b: 49, c: 65, s: 45},
-      {name: "メノクラゲ", number: 72, a: 45, b: 49, c: 65, s: 45},
-      {name: "ドククラゲ", number: 73, a: 45, b: 49, c: 65, s: 45},
-      {name: "イシツブテ", number: 74, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴローン", number: 75, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴローニャ", number: 76, a: 45, b: 49, c: 65, s: 45},
-      {name: "ポニータ", number: 77, a: 45, b: 49, c: 65, s: 45},
-      {name: "ギャロップ", number: 78, a: 45, b: 49, c: 65, s: 45},
-      {name: "ヤドン", number: 79, a: 45, b: 49, c: 65, s: 45},
-      {name: "ヤドラン", number: 80, a: 45, b: 49, c: 65, s: 45},
-      {name: "コイル", number: 81, a: 45, b: 49, c: 65, s: 45},
-      {name: "レアコイル", number: 82, a: 45, b: 49, c: 65, s: 45},
-      {name: "カモネギ", number: 83, a: 45, b: 49, c: 65, s: 45},
-      {name: "ドードー", number: 84, a: 45, b: 49, c: 65, s: 45},
-      {name: "ドードリオ", number: 85, a: 45, b: 49, c: 65, s: 45},
-      {name: "パウワウ", number: 86, a: 45, b: 49, c: 65, s: 45},
-      {name: "ジュゴン", number: 87, a: 45, b: 49, c: 65, s: 45},
-      {name: "ベトベター", number: 88, a: 45, b: 49, c: 65, s: 45},
-      {name: "ベトベトン", number: 89, a: 45, b: 49, c: 65, s: 45},
-      {name: "シェルダー", number: 90, a: 45, b: 49, c: 65, s: 45},
-      {name: "パルシェン", number: 91, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴース", number: 92, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゴースト", number: 93, a: 45, b: 49, c: 65, s: 45},
-      {name: "ゲンガー", number: 94, a: 45, b: 49, c: 65, s: 45},
-      {name: "イワーク", number: 95, a: 45, b: 49, c: 65, s: 45},
-      {name: "スリープ", number: 96, a: 45, b: 49, c: 65, s: 45},
-      {name: "スリーパー", number: 97, a: 45, b: 49, c: 65, s: 45},
-      {name: "クラブ", number: 98, a: 45, b: 49, c: 65, s: 45},
-      {name: "キングラー", number: 99, a: 45, b: 49, c: 65, s: 45},
-      {name: "ビリリダマ", number: 100, a: 45, b: 49, c: 65, s: 45},
-      {name: "マルマイン", number: 101, a: 45, b: 49, c: 65, s: 45},
-      {name: "タマタマ", number: 102, a: 45, b: 49, c: 65, s: 45},
-      {name: "ナッシー", number: 103, a: 45, b: 49, c: 65, s: 45},
-      {name: "カラカラ", number: 104, a: 45, b: 49, c: 65, s: 45},
-      {name: "ガラガラ", number: 105, a: 45, b: 49, c: 65, s: 45},
-      {name: "サワムラー", number: 106, a: 45, b: 49, c: 65, s: 45},
-      {name: "エビワラー", number: 107, a: 45, b: 49, c: 65, s: 45},
-      {name: "ベロリンガ", number: 108, a: 45, b: 49, c: 65, s: 45},
-      {name: "ドガース", number: 109, a: 45, b: 49, c: 65, s: 45},
-      {name: "マタドガス", number: 110, a: 45, b: 49, c: 65, s: 45},
-      {name: "サイホーン", number: 111, a: 45, b: 49, c: 65, s: 45},
-      {name: "サイドン", number: 112, a: 45, b: 49, c: 65, s: 45},
-      {name: "ラッキー", number: 113, a: 45, b: 49, c: 65, s: 45},
-      {name: "モンジャラ", number: 114, a: 45, b: 49, c: 65, s: 45},
-      {name: "がルーラ", number: 115, a: 45, b: 49, c: 65, s: 45},
-      {name: "タッツー", number: 116, a: 45, b: 49, c: 65, s: 45},
-      {name: "シードラ", number: 117, a: 45, b: 49, c: 65, s: 45},
-      {name: "トサキント", number: 118, a: 45, b: 49, c: 65, s: 45},
-      {name: "アズマオウ", number: 119, a: 45, b: 49, c: 65, s: 45},
-      {name: "ヒトデマン", number: 120, a: 45, b: 49, c: 65, s: 45},
-      {name: "スターミー", number: 121, a: 45, b: 49, c: 65, s: 45},
-      {name: "バリヤード", number: 122, a: 45, b: 49, c: 65, s: 45},
-      {name: "ストライク", number: 123, a: 45, b: 49, c: 65, s: 45},
-      {name: "ルージュラ", number: 124, a: 45, b: 49, c: 65, s: 45},
-      {name: "エレブー", number: 125, a: 45, b: 49, c: 65, s: 45},
-      {name: "ブーバー", number: 126, a: 45, b: 49, c: 65, s: 45},
-      {name: "ケンタロス", number: 127, a: 45, b: 49, c: 65, s: 45},
-      {name: "カイロス", number: 128, a: 45, b: 49, c: 65, s: 45},
-      {name: "コイキング", number: 129, a: 45, b: 49, c: 65, s: 45},
-      {name: "ギャラドス", number: 130, a: 45, b: 49, c: 65, s: 45},
-      {name: "ラプラス", number: 131, a: 45, b: 49, c: 65, s: 45},
-      {name: "メタモン", number: 132, a: 45, b: 49, c: 65, s: 45},
-      {name: "イーブイ", number: 133, a: 45, b: 49, c: 65, s: 45},
-      {name: "シャワーズ", number: 134, a: 45, b: 49, c: 65, s: 45},
-      {name: "サンダース", number: 135, a: 45, b: 49, c: 65, s: 45},
-      {name: "ブースター", number: 136, a: 45, b: 49, c: 65, s: 45},
-      {name: "ポリゴン", number: 137, a: 45, b: 49, c: 65, s: 45},
-      {name: "オムナイト", number: 138, a: 45, b: 49, c: 65, s: 45},
-      {name: "オムスター", number: 139, a: 45, b: 49, c: 65, s: 45},
-      {name: "カブト", number: 140, a: 45, b: 49, c: 65, s: 45},
-      {name: "カブトプス", number: 141, a: 45, b: 49, c: 65, s: 45},
-      {name: "プテラ", number: 142, a: 45, b: 49, c: 65, s: 45},
-      {name: "カビゴン", number: 143, a: 45, b: 49, c: 65, s: 45},
-      {name: "フリーザー", number: 144, a: 45, b: 49, c: 65, s: 45},
-      {name: "サンダー", number: 145, a: 45, b: 49, c: 65, s: 45},
-      {name: "ファイヤー", number: 146, a: 45, b: 49, c: 65, s: 45},
-      {name: "ミニリュウ", number: 147, a: 45, b: 49, c: 65, s: 45},
-      {name: "ハクリュウ", number: 148, a: 45, b: 49, c: 65, s: 45},
-      {name: "カイリュウ", number: 149, a: 45, b: 49, c: 65, s: 45},
-      {name: "ミュウツー", number: 150, a: 45, b: 49, c: 65, s: 45},
-      {name: "ミュウ", number: 151, a: 45, b: 49, c: 65, s: 45},
+      {name: "フシギダネ", hp: 45, attack: 49, defence: 49},
+      {name: "フシギソウ", hp: 60, attack: 62, defence: 63},
+      {name: "フシギバナ", hp: 80, attack: 82, defence: 83},
+      {name: "ゼニガメ", hp: 44, attack: 48, defence: 65},
+      {name: "カメール", hp: 59, attack: 63, defence: 80}
     ];
 
     $(function() {
@@ -177,7 +31,7 @@
             let newRecord = new TestDataClass();
             newRecord
             .set("name", init_data[i].name)
-            .set("level", init_data[i].level)
+            .set("hp", init_data[i].hp)
             .set("attack", init_data[i].attack)
             .set("defence", init_data[i].defence)
             .save();
@@ -202,12 +56,12 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg="<table><tr><th>name</th><th>Lvl</th><th>attack</th><th>defence</th></tr>";
+      let msg="<table><tr><th>name</th><th>hp</th><th>attack</th><th>defence</th></tr>";
       for(let i=0; i<results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
-        msg += "<td class='num'>" + results[i].level + "</td>";
+        msg += "<td class='num'>" + results[i].hp + "</td>";
         msg += "<td class='num'>" + results[i].attack + "</td>";
         msg += "<td class='num'>" + results[i].defence + "</td>";
         msg += "</tr>";
@@ -227,31 +81,91 @@
         showResults(result);
       })
     }
-    function searchLevel(){
-      let level=parseInt($("#level").val(), 10);
+    function searchHP(){
+      let level=parseInt($("#hp").val(), 10);
       let TestDataClass=ncmb.DataStore(db);
       TestDataClass
-      .equalTo("level", level)
+      .equalTo("hp", hp)
       .fetchAll()
       .then(function(result){
         showResults(result);
       })
     }
-    function searchLevelLT(){
-      let level=parseInt($("#level").val(), 10);
+    function searchHPLT(){
+      let level=parseInt($("#hp").val(), 10);
       let TestDataClass=ncmb.DataStore(db);
       TestDataClass
-      .lessThan("level", level)
+      .lessThan("hp", hp)
       .fetchAll()
       .then(function(result){
         showResults(result);
       })
     }
-     function searchLevelGT(){
-      let level=parseInt($("#level").val(), 10);
+     function searchHPGT(){
+      let level=parseInt($("#hp").val(), 10);
       let TestDataClass=ncmb.DataStore(db);
       TestDataClass
-      .greaterThan("level", level)
+      .greaterThan("hp", hp)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+    function searchattack(){
+      let level=parseInt($("#attack").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .equalTo("attack", attack)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+    function searchattackLT(){
+      let level=parseInt($("#attack").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .lessThan("attack", attack)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+     function searchattackGT(){
+      let level=parseInt($("#attack").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .greaterThan("attack", attack)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+    function searchdefence(){
+      let level=parseInt($("#defence").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .equalTo("defence", defence)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+    function searchdefenceLT(){
+      let level=parseInt($("#defence").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .lessThan("defence", defence)
+      .fetchAll()
+      .then(function(result){
+        showResults(result);
+      })
+    }
+     function searchdefenceGT(){
+      let level=parseInt($("#defence").val(), 10);
+      let TestDataClass=ncmb.DataStore(db);
+      TestDataClass
+      .greaterThan("defence", defence)
       .fetchAll()
       .then(function(result){
         showResults(result);
@@ -266,16 +180,34 @@
     <input id="name" type="text" placeholder="monster name">
   </div>
   <div>
-    <label for="level">level:</label>
-    <input id="level" type="number" placeholder="monster level">
+    <label for="hp">hp:</label>
+    <input id="hp" type="number" placeholder="monster hp">
+  </div>
+   <div>
+    <label for="attack">attack:</label>
+    <input id="attack" type="number" placeholder="monster attack">
+  </div>
+   <div>
+    <label for="defence">defence:</label>
+    <input id="defence" type="number" placeholder="monster defence">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchName()">Name</button>
     <br>
-    <button class="btn" onclick="searchLevelLT()">Level &lt;</button>
-     <button class="btn" onclick="searchLevel()">Level</button>
-     <button class="btn" onclick="searchLevelGT()">Level &gt;</button>
+    <button class="btn" onclick="searchHPLT()">HP &lt;</button>
+     <button class="btn" onclick="searchHP()">HP</button>
+     <button class="btn" onclick="searchHPGT()">HP &gt;</button>
+  </div>
+  <br>
+     <button class="btn" onclick="searchattackLT()">attack &lt;</button>
+     <button class="btn" onclick="searchattack()">attack</button>
+     <button class="btn" onclick="searchattackGT()">attack &gt;</button>
+     </div>
+     <br>
+     <button class="btn" onclick="searchdefenceLT()">defence &lt;</button>
+     <button class="btn" onclick="searchdefence()">defence</button>
+     <button class="btn" onclick="searchdefenceGT()">defence &gt;</button>
   </div>
   <div id="message">initializing...</div>
 </body>
